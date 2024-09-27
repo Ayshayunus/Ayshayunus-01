@@ -19,7 +19,14 @@
     50% { transform: translateY(-10%); opacity: 1; } 
     100% { transform: translateY(0); opacity: 1; } 
 }
-
+@keyframes rotanim{
+    from{
+        transform: rotateX(90deg);
+    }
+    to{
+        transform: rotateX(0);
+    }
+}
 :root { --theme: #ff7f27; }
 
 a { color: white; }
@@ -102,7 +109,11 @@ nav a:hover {
     align-items: center; 
     margin-left: 100px; 
     max-width: 800px; 
-    animation: slide 2s ease; 
+    animation: slide 1.5s ease; 
+}
+.content-details>h1,.content-details>p,.content-details>a{
+    animation: slide 1s ease; 
+    animation-delay: calc(var(--i) * 100ms);
 }
 
 .about, .image-gallery { 
@@ -123,6 +134,10 @@ nav a:hover {
     max-width: 500px; 
     text-align: justify; 
     animation: slideRight 1s; 
+}
+.about-details>h1,.about-details>p,.about-details>a{
+    animation: slideRight 1s; 
+    animation-delay: calc(var(--i) * 100ms);
 }
 
 .image-gallery img { 
@@ -217,8 +232,8 @@ input, textarea {
     background-color: #ffffff2c; 
     border: none; 
     transition: 0.125s linear; 
-    animation: slide 0.1s ease forwards; 
-    animation-delay: calc(var(--i) * 0.05s); 
+    animation: slide 0.5s ease forwards; 
+    animation-delay: calc(var(--i) * 150ms); 
 }
 
 fieldset > input, fieldset > textarea { opacity: 0; }
@@ -278,4 +293,10 @@ input[type=checkbox]{
 	width: 15px;
 	margin: 0 2px;
 	accent-color: var(--theme);
+}
+.rot{
+    transform: rotateX(90deg);
+    animation: rotanim 0.75s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: calc(var(--i) * 100ms);
 }
