@@ -212,7 +212,7 @@ input, textarea {
     background-color: #ffffff2c; 
     border: none; 
     transition: 0.125s linear; 
-    animation: slide 2s ease forwards; 
+    animation: slide 0.2s ease forwards; 
     animation-delay: calc(var(--i) * 0.05s); 
 }
 
